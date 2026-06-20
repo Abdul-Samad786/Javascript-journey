@@ -18,3 +18,10 @@ const myfunc=function(){
     console.log("Hello world")
 }
 console.log(typeof myfunc) //function
+
+
+//********************************* */
+// Stack and Heap memory
+//Stack (Primitives), heap(Non-primtives)
+
+let myyoutubename="abdulsamadtech"

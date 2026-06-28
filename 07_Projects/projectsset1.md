@@ -8,7 +8,7 @@
 ## project 1
 
 ```javascript
-console.log("Abdul Samad")
+console.log("hitesh")
 const buttons = document.querySelectorAll('.button');
 const body = document.querySelector('body');
 

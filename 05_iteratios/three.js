@@ -42,7 +42,7 @@ const arr = [
  20,
  30,
  40,
- 50
+ 50 
 ];
 
 // use forEach

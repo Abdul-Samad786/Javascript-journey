@@ -1,0 +1,122 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdul Samad Tariq</title>
+    <style>
+body{
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+}
+
+.card{
+display:grid;
+
+width:300px;
+
+padding:20px;
+
+border:1px solid black;
+
+border-radius:10px;
+
+place-items:center;
+}
+
+img{
+width:150px;
+
+height:150px;
+
+object-fit:cover;
+
+border-radius:50%;
+}
+</style>
+</head>
+<body>
+    <div class="card">
+
+    <img
+      id="profile-image"
+      src=""
+      alt="profile image"
+    >
+
+    <h2 id="followers">
+      Followers: --
+    </h2>
+    <button class="button">
+        Hit API
+    </button>
+</div>
+
+</body>
+<script>
+
+const url =
+  "https://api.github.com/users/Abdul-Samad786";
+
+const image =
+  document.getElementById("profile-image");
+
+const followers =
+  document.getElementById("followers");
+
+const button =
+document.querySelector(
+".button"
+);
+
+let xttp =
+  new XMLHttpRequest();
+
+xttp.open(
+  "GET",
+  url
+);
+
+button.addEventListener(
+  "click",
+  () => {
+
+    console.log("hits");
+
+    xttp.onreadystatechange =
+      function () {
+
+        if (
+          this.readyState === 4 &&
+          this.status === 200
+        ) {
+
+          console.log(
+            this.responseText
+          );
+
+          const response =
+            JSON.parse(
+              this.responseText
+            );
+
+          image.src =
+            response.avatar_url;
+
+          followers.innerText =
+            `Followers: ${response.followers}`;
+        }
+
+      };
+
+    xttp.send();
+
+  }
+);
+
+</script>
+</html>

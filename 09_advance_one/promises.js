@@ -43,3 +43,17 @@ const promiseFour = new Promise(function(resolve, reject){
 }).catch(function(error){
     console.log(error);
 }).finally(() => console.log("The promise is either resolved or rejected"))
+////
+
+
+fetch('https://api.github.com/users/hiteshchoudhary')
+.then((response) => {
+    return response.json()
+})
+.then((data) => {
+    console.log(data);
+})
+.catch((error) => console.log(error))
+
+// promise.all
+// yes this is also available, kuch reading aap b kro.

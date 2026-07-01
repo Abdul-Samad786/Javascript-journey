@@ -29,7 +29,7 @@ child.walk();
 ///////////////////////////////////////
 
 // let myName = "hitesh     "
-// let mychannel = "chai     "
+// let mychannel = "     "
 
 // console.log(myName.trueLength);
 
@@ -62,8 +62,8 @@ Array.prototype.heyHitesh = function(){
 // inheritance
 
 const User = {
-    name: "chai",
-    email: "chai@google.com"
+    name: "abdul",
+    email: "abdul@google.com"
 }
 
 const Teacher = {
@@ -85,7 +85,7 @@ Teacher.__proto__ = User
 // modern syntax
 Object.setPrototypeOf(TeachingSupport, Teacher)
 
-let anotherUsername = "ChaiAurCode     "
+let anotherUsername = "Abdul Samad     "
 
 String.prototype.trueLength = function(){
     console.log(`${this}`);
